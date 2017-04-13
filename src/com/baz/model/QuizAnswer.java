@@ -6,38 +6,33 @@ import java.io.Serializable;
  * Created by arahis on 4/13/17.
  */
 public class QuizAnswer implements Serializable {
-    private String question;
-    private String answer;
+    private String questionText;
+    private String answerText;
 
     public QuizAnswer() {
     }
 
-    public QuizAnswer(String question, String answer) {
-        this.question = question;
-        this.answer = answer;
+    public String getQuestionText() {
+        return questionText;
     }
 
-    public String getQuestion() {
-        return question;
+    public void setQuestionText(String questionText) {
+        this.questionText = questionText;
     }
 
-    public void setQuestion(String question) {
-        this.question = question;
+    public String getAnswerText() {
+        return answerText;
     }
 
-    public String getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void setAnswerText(String answerText) {
+        this.answerText = answerText;
     }
 
     @Override
     public String toString() {
         return "QuizAnswer{" +
-                "question='" + question + '\'' +
-                ", answer='" + answer + '\'' +
+                "questionText='" + questionText + '\'' +
+                ", answerText='" + answerText + '\'' +
                 '}';
     }
 
@@ -48,14 +43,14 @@ public class QuizAnswer implements Serializable {
 
         QuizAnswer that = (QuizAnswer) o;
 
-        if (!question.equals(that.question)) return false;
-        return answer != null ? answer.equals(that.answer) : that.answer == null;
+        if (!questionText.equals(that.questionText)) return false;
+        return answerText != null ? answerText.equals(that.answerText) : that.answerText == null;
     }
 
     @Override
     public int hashCode() {
-        int result = question.hashCode();
-        result = 31 * result + (answer != null ? answer.hashCode() : 0);
+        int result = questionText.hashCode();
+        result = 31 * result + (answerText != null ? answerText.hashCode() : 0);
         return result;
     }
 }

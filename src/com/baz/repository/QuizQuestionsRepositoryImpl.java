@@ -30,16 +30,16 @@ public class QuizQuestionsRepositoryImpl implements QuizQuestionsRepository {
             answers.add("Maybe");
 
             QuizQuestion question1 = new QuizQuestion();
-            question1.setQuestion("Do you like pointless questions?");
-            question1.setAnswers(answers);
+            question1.setQuestionText("Do you like pointless questions?");
+            question1.setAnswersText(answers);
 
             QuizQuestion question2 = new QuizQuestion();
-            question2.setQuestion("Do you like quizzes?");
-            question2.setAnswers(answers);
+            question2.setQuestionText("Do you like quizzes?");
+            question2.setAnswersText(answers);
 
             QuizQuestion question3 = new QuizQuestion();
-            question3.setQuestion("Do you regret of wasted time doing this quiz?");
-            question3.setAnswers(answers);
+            question3.setQuestionText("Do you regret of wasted time doing this quiz?");
+            question3.setAnswersText(answers);
 
             questions.add(question1);
             questions.add(question2);

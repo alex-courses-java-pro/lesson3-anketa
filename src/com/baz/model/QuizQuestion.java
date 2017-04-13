@@ -7,33 +7,33 @@ import java.util.List;
  * Created by arahis on 4/13/17.
  */
 public class QuizQuestion implements Serializable {
-    private String question;
-    private List<String> answers;
+    private String questionText;
+    private List<String> answersTextList;
 
     public QuizQuestion() {
     }
 
-    public String getQuestion() {
-        return question;
+    public String getQuestionText() {
+        return questionText;
     }
 
-    public void setQuestion(String question) {
-        this.question = question;
+    public void setQuestionText(String questionText) {
+        this.questionText = questionText;
     }
 
-    public List<String> getAnswers() {
-        return answers;
+    public List<String> getAnswersTextList() {
+        return answersTextList;
     }
 
-    public void setAnswers(List<String> answers) {
-        this.answers = answers;
+    public void setAnswersText(List<String> answersTextList) {
+        this.answersTextList = answersTextList;
     }
 
     @Override
     public String toString() {
         return "QuizQuestion{" +
-                "question='" + question + '\'' +
-                ", answers:" + answers.toString() +
+                "questionText='" + questionText + '\'' +
+                ", answersTextList:" + answersTextList.toString() +
                 '}';
     }
 
@@ -44,14 +44,14 @@ public class QuizQuestion implements Serializable {
 
         QuizQuestion that = (QuizQuestion) o;
 
-        if (!question.equals(that.question)) return false;
-        return answers.equals(that.answers);
+        if (!questionText.equals(that.questionText)) return false;
+        return answersTextList.equals(that.answersTextList);
     }
 
     @Override
     public int hashCode() {
-        int result = question.hashCode();
-        result = 31 * result + answers.hashCode();
+        int result = questionText.hashCode();
+        result = 31 * result + answersTextList.hashCode();
         return result;
     }
 }

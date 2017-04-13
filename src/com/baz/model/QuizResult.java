@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class QuizResult implements Serializable{
     private String name;
-    private List<QuizAnswer> answers;
+    private List<QuizAnswer> quizAnswersList;
 
     public String getName() {
         return name;
@@ -18,19 +18,19 @@ public class QuizResult implements Serializable{
         this.name = name;
     }
 
-    public List<QuizAnswer> getAnswers() {
-        return answers;
+    public List<QuizAnswer> getQuizAnswersList() {
+        return quizAnswersList;
     }
 
-    public void setAnswers(List<QuizAnswer> answers) {
-        this.answers = answers;
+    public void setQuizAnswers(List<QuizAnswer> quizAnswersList) {
+        this.quizAnswersList = quizAnswersList;
     }
 
     @Override
     public String toString() {
         return "QuizResult{" +
                 "name='" + name + '\'' +
-                ", answers=" + answers.toString() +
+                ", quizAnswersList=" + quizAnswersList.toString() +
                 '}';
     }
 
@@ -42,13 +42,13 @@ public class QuizResult implements Serializable{
         QuizResult that = (QuizResult) o;
 
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        return answers != null ? answers.equals(that.answers) : that.answers == null;
+        return quizAnswersList != null ? quizAnswersList.equals(that.quizAnswersList) : that.quizAnswersList == null;
     }
 
     @Override
     public int hashCode() {
         int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (answers != null ? answers.hashCode() : 0);
+        result = 31 * result + (quizAnswersList != null ? quizAnswersList.hashCode() : 0);
         return result;
     }
 }

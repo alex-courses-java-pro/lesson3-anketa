@@ -8,9 +8,9 @@
     <title>Statistic</title>
 </head>
 <body>
-<c:forEach items="${requestScope.questions}" var="question">
-    <br/> <c:out value="question: ${question}"/>
-    <c:forEach items="${requestScope.answerStat}" var="stat">
+<c:forEach items="${requestScope.stats}" var="answerData">
+    <br/> <c:out value="question: ${answerData.question}"/>
+    <c:forEach items="${answerData.answerStat}" var="stat">
         <br/> <c:out value="answered \"${stat.key}\" ${stat.value} times"/>
     </c:forEach>
 </c:forEach>
