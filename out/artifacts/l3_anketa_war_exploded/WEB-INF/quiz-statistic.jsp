@@ -13,6 +13,7 @@
     <c:forEach items="${answerData.answerStat}" var="stat">
         <br/> <c:out value="answered \"${stat.key}\" ${stat.value} times"/>
     </c:forEach>
+    <br/>
 </c:forEach>
 </body>
 </html>

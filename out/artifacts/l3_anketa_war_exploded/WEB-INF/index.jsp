@@ -15,11 +15,9 @@
     <c:forEach items="${requestScope.questions}" var="question">
         <br/> ${question.questionText}
         <input type="hidden" name="questionText${questionIndex}" value="${question.questionText}"/>
-        <c:set var="answerIndex" value="0"/>
         <c:forEach items="${question.answersTextList}" var="answer">
             <br/> <input type="radio" name="question${questionIndex}rb"
-                         value="${answer}"/>${answer}
-            <c:set var="answerIndex" value="${answerIndex + 1}"/>
+                         value="${answer}" checked/>${answer}
         </c:forEach>
         <c:set var="questionIndex" value="${questionIndex + 1}"/>
     </c:forEach>

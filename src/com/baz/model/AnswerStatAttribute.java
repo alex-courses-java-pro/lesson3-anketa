@@ -1,4 +1,4 @@
-package com.baz.util;
+package com.baz.model;
 
 import java.util.HashMap;
 

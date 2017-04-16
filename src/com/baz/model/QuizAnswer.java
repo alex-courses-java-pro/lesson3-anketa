@@ -12,6 +12,11 @@ public class QuizAnswer implements Serializable {
     public QuizAnswer() {
     }
 
+    public QuizAnswer(String questionText, String answerText) {
+        this.questionText = questionText;
+        this.answerText = answerText;
+    }
+
     public String getQuestionText() {
         return questionText;
     }

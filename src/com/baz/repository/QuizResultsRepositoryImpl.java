@@ -1,6 +1,5 @@
 package com.baz.repository;
 
-import com.baz.model.QuizQuestion;
 import com.baz.model.QuizResult;
 
 import java.util.ArrayList;
